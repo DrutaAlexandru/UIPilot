@@ -144,6 +144,7 @@ struct NavigationControllerHost<T: Equatable, Screen: View>: UIViewControllerRep
     func updateUIViewController(_ navigation: UINavigationController, context: Context) {
         navigation.topViewController?.navigationItem.title = navTitle
         navigation.navigationBar.isHidden = navHidden
+        navigation.tabBarController?.tabBar.isHidden = true
     }
     
     static func dismantleUIViewController(_ navigation: UINavigationController, coordinator: ()) {
